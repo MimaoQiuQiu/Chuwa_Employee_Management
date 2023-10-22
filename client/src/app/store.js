@@ -1,4 +1,4 @@
-// Redux store
+// Redux store configuration
 import { configureStore } from "@reduxjs/toolkit";
 import employeeReducer from "./employeeSlice";
 import errorReducer from "./errorSlice";

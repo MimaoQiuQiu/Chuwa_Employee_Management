@@ -1,3 +1,5 @@
+// handles errors
+
 import { createSlice } from "@reduxjs/toolkit";
 
 export const initialState = {
