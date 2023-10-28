@@ -116,12 +116,12 @@ const PersonalInfo = () => {
             </div>
             <div>
               <Form.Item label="Pic" name="profilePicture">
-                <Input />
+                <Input style={{ width: 150 }} />
               </Form.Item>
             </div>
             <div>
               <Form.Item label="Email" name="email">
-                <Input />
+                <Input style={{ width: 150 }} />
               </Form.Item>
             </div>
             <div className="form-row" style={{ display: "flex", gap: "10px" }}>
@@ -132,10 +132,10 @@ const PersonalInfo = () => {
                 validateStatus={ssnValid ? "success" : "error"}
                 help={ssnValid ? "" : "Invalid SSN format"}
               >
-                <Input />
+                <Input style={{ width: 150 }} />
               </Form.Item>
               <Form.Item label="Dob" name="dob">
-                <Input />
+                <Input style={{ width: 150 }} />
               </Form.Item>
               <Form.Item
                 name="gender"
@@ -161,7 +161,40 @@ const PersonalInfo = () => {
                 validateStatus={phoneValid ? "success" : "error"}
                 help={phoneValid ? "" : "Invalid phone number format"}
               >
+                <Input style={{ width: 150 }} />
+              </Form.Item>
+            </div>
+            <p>Enmergency contact</p>
+            <div className="form-row" style={{ display: "flex", gap: "10px" }}>
+              <Form.Item label="First Name" name="emerfirstName">
                 <Input />
+              </Form.Item>
+              <Form.Item label="Middle Name" name="emermiddleName">
+                <Input />
+              </Form.Item>
+              <Form.Item label="Last Name" name="emerlastName">
+                <Input />
+              </Form.Item>
+            </div>
+            <div>
+              <Form.Item
+                label="Phone"
+                name="emergyphone"
+                hasFeedback
+                validateStatus={phoneValid ? "success" : "error"}
+                help={phoneValid ? "" : "Invalid phone number format"}
+              >
+                <Input style={{ width: 150 }} />
+              </Form.Item>
+            </div>
+            <div>
+              <Form.Item label="email" name="emeremail">
+                <Input style={{ width: 150 }} />
+              </Form.Item>
+            </div>
+            <div>
+              <Form.Item label="relationship" name="relationship">
+                <Input style={{ width: 150 }} />
               </Form.Item>
             </div>
             {/* Add other form fields here */}
