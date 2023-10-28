@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import { Layout, Menu } from "antd";
 import { Outlet } from "react-router-dom";
-import { useMediaQuery } from "hooks/useMediaQuery";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-import Navbar from "components/Navbar";
-import Footbar from "components/Footbar";
+import Navbar from "../Navbar";
+import Footbar from "../Footbar";
 
 const { Header, Content, Footer } = Layout;
 

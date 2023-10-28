@@ -21,7 +21,7 @@ import {
   DeleteOutlined,
   DownloadOutlined,
 } from "@ant-design/icons";
-import { useMediaQuery } from "hooks/useMediaQuery";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 import {
   fetchEmployeeAction,
@@ -31,8 +31,8 @@ import {
   fetchDocumentsAction,
   deleteDocumentAction,
   setTextInfo,
-} from "app/employeeSlice";
-import { fetchDocuments } from "services/employee";
+} from "../../app/employeeSlice";
+import { fetchDocuments } from "../../services/employee";
 
 const { Option } = Select;
 

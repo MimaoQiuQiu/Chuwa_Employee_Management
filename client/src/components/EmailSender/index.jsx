@@ -4,8 +4,8 @@ import { Button, Form, Input, message } from "antd";
 import { MailOutlined } from "@ant-design/icons";
 import emailjs from "@emailjs/browser";
 
-import generateToken from "features/registerToken";
-import { sendRegisterToken } from "app/hrSlice";
+import generateToken from "../../features/registerToken";
+import { sendRegisterToken } from "../../app/hrSlice";
 
 export default function EmailSender() {
   const dispatch = useDispatch();

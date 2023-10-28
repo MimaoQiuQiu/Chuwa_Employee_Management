@@ -14,11 +14,13 @@ import {
   FileDoneOutlined,
 } from "@ant-design/icons";
 
-import { logOut } from "app/employeeSlice";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
+
+import { logOut } from "../../app/employeeSlice";
 import DrawerContent from "./DrawerContent";
 
 const { Title } = Typography;
-const title = "Chuwa Employee Management System";
+let title = "Chuwa Employee Management System";
 
 export default function Navbar() {
   const { pathname: location } = useLocation();
@@ -27,6 +29,8 @@ export default function Navbar() {
   const { isAuthenticated, employee } = useSelector((state) => state.employee);
   const [open, setOpen] = useState(false);
   const [features, setFeatures] = useState([]);
+  const isTablet = useMediaQuery("(max-width: 768px) and (min-width: 425px)");
+  const isMobile = useMediaQuery("(max-width: 760px)");
 
   useEffect(() => {
     employee.role === "HR"
@@ -132,8 +136,12 @@ export default function Navbar() {
       </div>
 
       <div className="title">
-        <Title level={3} style={{ margin: 0, color: "#FFF" }}>
-          {title}
+        <Title
+          level={3}
+          className="title-text"
+          style={{ margin: 0, color: "#FFF" }}
+        >
+          {isMobile ? "CEMS" : title}
         </Title>
       </div>
 
@@ -160,6 +168,7 @@ export default function Navbar() {
         onClose={onClose}
         open={open}
         key="left"
+        className="DrawerContent"
       >
         <DrawerContent features={features} />
       </Drawer>

@@ -71,6 +71,8 @@ li.ant-list-item:hover {
 
   .title {
     order: -1;
+    display: flex;
+    font-size: 10rem;
   }
 
   .searchBox {

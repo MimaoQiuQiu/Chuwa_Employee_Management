@@ -1,14 +1,14 @@
 // employee related actions and reducers
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-import { signup, signin, updatePassword, register } from "services/auth";
+import { signup, signin, updatePassword, register } from "../services/auth";
 import {
   fetchEmployee,
   updateEmployee,
   uploadDocument,
   fetchDocuments,
   deleteDocument,
-} from "services/employee";
+} from "../services/employee";
 import { addError, removeError } from "./errorSlice";
 
 const initialState = {

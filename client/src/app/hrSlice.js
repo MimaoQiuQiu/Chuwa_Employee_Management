@@ -12,7 +12,7 @@ import {
   fetchVisaDetail,
   uploadVisaReview,
   uploadOBApplicationReview,
-} from "services/hr";
+} from "../services/hr";
 import { addError, removeError } from "./errorSlice";
 
 const initialState = {
