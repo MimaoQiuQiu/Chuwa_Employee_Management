@@ -64,6 +64,7 @@ export default function HrVisaDetail() {
       setDetail({
         name: `${selectedEmployee.name.first_name} ${selectedEmployee.name.last_name}`,
         work_authorization: selectedEmployee.work_authorization,
+        email: selectedEmployee.email,
         documents: docs,
         next_step,
       });
@@ -122,7 +123,8 @@ export default function HrVisaDetail() {
   };
 
   const handleNotification = async () => {
-    let email = "shuaixinli121@gmail.com";
+    //let email = "shuaixinli121@gmail.com";
+    let email = detail.email;
     emailjs
       .send(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
