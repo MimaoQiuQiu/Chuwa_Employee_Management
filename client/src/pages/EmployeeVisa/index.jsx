@@ -30,6 +30,7 @@ export default function EmployeeVisa() {
     dispatch(fetchEmployeeAction(employee.id));
   }, []);
 
+  // handle documents upload process
   useEffect(() => {
     if (status === "successed") {
       let docs = [];
