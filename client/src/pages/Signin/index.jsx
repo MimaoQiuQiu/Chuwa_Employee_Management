@@ -23,10 +23,8 @@ export default function SignUp() {
   useEffect(() => {
     if (isAuthenticated) navigate("/");
   }, [isAuthenticated]);
+  const [ hr, sethr ] = useState(false);
 
-  const state = {
-    hr: false
-  };
 
   const fields = [
     {
@@ -57,7 +55,7 @@ export default function SignUp() {
 
   const onSubmit = (data) => {
 
-    if (state.hr) {
+    if (hr) {
       const { Email: email, Password: password, Username: username } = data;
       dispatch(signUpEmployee({ email, password, username: "HR"+email, role: "HR", hrsigning: true }));
     }
@@ -89,7 +87,7 @@ export default function SignUp() {
           </>
         }
       ></AuthForm>
-      <Button ghost onClick={() => { state.hr = !state.hr; console.log("in HR debug mode: " + state.hr) }} >HR</Button>
+      <Button ghost onClick={() => { sethr(!hr); console.log("in HR debug mode: " + hr) }} >HR</Button>
     </div>
   );
 }

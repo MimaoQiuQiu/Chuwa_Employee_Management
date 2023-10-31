@@ -22,7 +22,9 @@ export default function HrProfiles() {
   useEffect(() => {
     setList(
       employees.map((employee, index) => {
+        console.log(employee.role);
         return {
+          role: employee.role,
           key: index + 1,
           id: employee.id,
           email: employee.email,
@@ -58,6 +60,7 @@ export default function HrProfiles() {
           ? employee.work_authorization.title
           : null,
       };
+      console.log(output.role);
       if (output.name.toLowerCase().includes(searchInput.toLowerCase()) && (output.role !== "HR")) {
         filteredList.push(output);
       }
