@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container h2 {
+  margin-bottom: 30px !important;
+}
+
+.container .ant-spin-container {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* width: 100%; */
+}
+
+.ant-table {
+  width: 100%;
+}
+
+.ant-table-tbody tr:hover {
+  color: rgb(148, 148, 148);
+}
+
+@media screen and (max-width: 630px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 350px;
+    background-color: #fff;
+    align-items: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+
+  .ant-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 630px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 600px;
+    background-color: #fff;
+    align-items: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+
+  .ant-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 944px) and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 800px;
+    background-color: #fff;
+    align-items: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+
+  .ant-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
