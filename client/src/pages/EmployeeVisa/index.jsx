@@ -79,7 +79,7 @@ export default function EmployeeVisa() {
         setDetail({
           documents: [],
           next_step: visaProcess[0],
-          message: `Please start by uploading your ${visaProcess[0]}}`,
+          message: `Please start by uploading your ${visaProcess[0]}`,
         });
       }
     }
